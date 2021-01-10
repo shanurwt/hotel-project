@@ -1,0 +1,31 @@
+body{
+    background: #0d1521;
+    font-family: tahoma;
+    color: #989898;
+}
+h1{
+    padding: 20px 0;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    height: 70vh;
+    width: 100%;
+}
+.form{
+margin: auto;
+display: grid;
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 2px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+  }
+.submit{
+    border-radius: 10cm;
+}
