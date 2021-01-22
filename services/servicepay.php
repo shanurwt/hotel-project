@@ -7,15 +7,17 @@ if (!$conn) {
 }
 
 if (isset($_POST['submit'])) {
-    $bf = $_POST['bf'];
-    $lun = $_POST['lun'];
-    $din = $_POST['din'];
+
     $gym = $_POST['gym'];
     $ldry = $_POST['ldry'];
     $msg = $_POST['msg'];
     $prk = $_POST['prk'];
-
-    $total = ($bf * 200) + ($lun * 400) + ($din * 750) + ($gym * 1000) + ($ldry * 1000) + ($msg * 1000) + ($prk * 1000);
+    $tota = "<script> document.write(cost) </script>";
+    $total_food = (int)$tota;
+    printf("%d RS.\n", $tota);
+    echo $tota;
+    echo $total_food;
+    $total = ($gym * 200) + ($ldry * 150) + ($msg * 300) + ($prk * 0) + $total_food;
 
     $query  = "SELECT id FROM guests LIMIT 110 ";
 
@@ -31,8 +33,8 @@ if (isset($_POST['submit'])) {
         echo "lolo";
     }
 
-    if (mysqli_query($conn, "INSERT INTO rooms(room_id, single_bed, double_bed, single_ac, double_ac, room_price)
-    VALUES ('$room_id', '$si_bed','$do_bed', '$si_ac', '$do_ac', '$total')")) {
+    if (mysqli_query($conn, "INSERT INTO services(room_id, gym, ldry, msg, prk, price)
+    VALUES ('$room_id', '$gym', '$ldry', '$msg', '$prk', '$total')")) {
         header("Location: ../payment/payment.php");
     } else {
         echo "Error: " . mysqli_error($conn);

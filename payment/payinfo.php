@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 
     if (mysqli_query($conn, "INSERT INTO payment(username, credit, month, year, cvv, amount)
     VALUES ('$username', '$credit', '$month', '$year', '$cvv', '$amount')")) {
-        echo "done";
+        header("Location: ../index.php");
     } else {
         echo "Error: " . mysqli_error($conn);
     }

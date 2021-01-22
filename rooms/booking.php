@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
 
     if (mysqli_query($conn, "INSERT INTO rooms(room_id, single_bed, double_bed, single_ac, double_ac, room_price)
     VALUES ('$room_id', '$si_bed','$do_bed', '$si_ac', '$do_ac', '$total')")) {
-        header("Location: ../payment/payment.php");
+        header("Location: ../services/service.php");
     } else {
         echo "Error: " . mysqli_error($conn);
     }

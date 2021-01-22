@@ -42,10 +42,6 @@
             width: 50%;
         }
 
-        /* p {
-            margin: auto;
-            width: 50%;
-        } */
         .cost {
             margin-left: 30px;
             width: 50%;
@@ -68,6 +64,27 @@
             align-items: center;
             justify-content: center;
         }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            color: #0d1521;
+            background-color: #bdc3c7;
+            min-width: 100px;
+            min-height: 20px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .rm1 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .rm1:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 
@@ -83,8 +100,12 @@
                 <div class="container">
                     <h4><b>Single Bedroom</b></h4>
                     <p class="cost">Rs 200</p>
-                    <input type="number" name="si_bed" class="numbers" id="sb" value="0" min="0">
-                    <p class="cost"></p>
+                    <div class="rm1">
+                        <h3> Select days</h3>
+                        <div class="dropdown-content">
+                            <input type="number" name="si_bed" class="numbers" id="sb" value="0" min="0" max="7">
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -93,20 +114,26 @@
                 <div class="container">
                     <h4><b>Double Bedroom</b></h4>
                     <p class="cost">Rs 400</p>
-                    <input type="number" name="do_bed" class="numbers" id="db" value="0" min="0">
+                    <div class="rm1">
+                        <h3> Select days</h3>
+                        <div class="dropdown-content">
+                            <input type="number" name="do_bed" class="numbers" id="db" value="0" min="0" max="7">
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
-
             <div class="room3">
                 <img src="room3.jpg" alt="">
                 <div class="container">
                     <h4><b>Single Bed A/C</b></h4>
                     <p class="cost">Rs 750</p>
-                    <input type="number" name="si_ac" class="numbers" id="sac" value="0" min="0">
+                    <div class="rm1">
+                        <h3> Select days</h3>
+                        <div class="dropdown-content">
+                            <input type="number" name="si_ac" class="numbers" id="sac" value="0" min="0" max="7">
+                        </div>
+                    </div>
                 </div>
-
             </div>
 
             <div class=" room4">
@@ -114,14 +141,15 @@
                 <div class="container">
                     <h4><b>Double Bed A/C</b></h4>
                     <p class="cost">Rs 1000</p>
-                    <input type="number" name="do_ac" class="numbers" id="dac" value="0" min="0">
+                    <div class="rm1">
+                        <h3> Select days</h3>
+                        <div class="dropdown-content">
+                            <input type="number" name="do_ac" class="numbers" id="dac" value="0" min="0" max="7">
+                        </div>
+                    </div>
                 </div>
-
             </div>
-
         </div>
-
-
         <div class="total">
             <button onclick="gettin()" type="button" style=" font-size: 0.9em;">Total</button>
             <p> Rs </p>

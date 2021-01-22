@@ -24,3 +24,4 @@ if (isset($_POST['submit'])) {
         echo "Error: " . mysqli_error($conn);
     }
 }
+

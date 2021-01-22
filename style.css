@@ -29,3 +29,18 @@ input[type=text], input[type=password] {
 .submit{
     border-radius: 10cm;
 }
+a:link {
+    text-decoration: none;
+    color: #dcdde1;
+  }
+  a:visited {
+    color: #4cd137;
+  }
+
+  a:hover {
+    color: hotpink;
+  }
+
+  a:active {
+    color: blue;
+  }
