@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
 
     $total = ($si_bed * 200) + ($do_bed * 400) + ($si_ac * 750) + ($do_ac * 1000);
 
-    $query  = "SELECT id FROM guests LIMIT 110 ";
+    $query  = "SELECT id FROM guests LIMIT 110";
 
     if ($result = mysqli_query($conn, $query)) {
         $n = mysqli_num_rows($result);
